@@ -5,13 +5,13 @@
 
 using namespace std;
 
+template <typename T, typename T_size>
+typedef struct Cache{
 
-typedef struct cache{
-
-    long long int size_of_cache; // размер кэша
-    vector <long long int> cache_table; // массив с индексами
+    T_size size_of_cache; // размер кэша
+    vector <T> cache_table; // массив с индексами
     
-    int find_value(long long int value){
+    int find_value(T value){
 
         auto hit = find(cache_table.begin(), cache_table.end(), value); // индекс нового элемента в массиве
 
@@ -37,6 +37,4 @@ typedef struct cache{
            }
        }
     }
-
-} cache_t; 
-
+}; 
