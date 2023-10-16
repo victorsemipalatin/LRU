@@ -37,15 +37,15 @@ int test_func(Tcase test){
 
 
 int main(void){
-  
+  // документация по doxygen
     vector <Tcase> test_cases = {Tcase(2, {1, 2, 3, 2, 1}, 1),
                                  Tcase(3, {1, 1, 1, 1, 1, 1}, 5),
                                  Tcase(2, {1, 3, 2, 4, 2}, 1),
                                  Tcase(4, {1, 3, 4, 5, 3, 5}, 2),
                                  Tcase(5, {1, 2, 3, 4, 5, 5, 3, 1}, 3)};
 
-    int l = test_cases.size();
-    for(int i = 0; i < l; i++){
+    int len = test_cases.size();
+    for(int i = 0; i < len; i++){
       assert(test_func(test_cases[i]) == test_cases[i].get_res_of_test());
     } 
 
